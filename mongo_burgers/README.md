@@ -1,5 +1,4 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive) 
-
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 # Beauty and the Burger
 
@@ -10,7 +9,6 @@ The orders should have a
 - meat selection
 - whether or not there will be cheese
 - a list of toppings
-
 
 ## Resources
 
@@ -34,28 +32,33 @@ db.burger.find({meat:{$ne:'beef'}})
 ### Get Started
 
 - start `mongo` server
+
   - in terminal type `mongod`
   - **Note** - to stop : `control c`
 
-- start a  `mongo shell`
+- start a `mongo shell`
+
   - when mongo is running, open a new tab in terminal and type
   - `mongo`
   - your prompt should now be a `>`
   - **Note** - to stop : type `exit`
-
 
 - `show dbs` to show your databases
 
 - `db` show which database is in use (default is usually `test`)
 
 - `use burgers` to switch to a database named burgers, if there is no database `burgers` it will create and switch into it
+
   - expected output
+
   ```
   switched to db burgers
   ```
 
 - `db.createCollection('burger')` to create a burger collection
+
   - Expected output:
+
   ```
   {
     "ok": 1
@@ -63,34 +66,37 @@ db.burger.find({meat:{$ne:'beef'}})
   ```
 
 - `show collections` - to show collections
+
   - Expected output
+
   ```
   burgers → 0.000MB / 0.004MB
   ```
 
 - Let's make a burger document together
- 
- ```
- db.burger.insert(
-   {
-     meat: 'beef',
-     cheese: false,
-     toppings: ['ketchup' ,'onions' ,'pickles']
-   }
-   )
- ```
- 
- - Expected output:
- 
- ```
-  WriteResult({
-  "nInserted": 1
+
+```
+db.burger.insert(
+  {
+    meat: 'beef',
+    cheese: false,
+    toppings: ['ketchup' ,'onions' ,'pickles']
+  }
+  )
+```
+
+- Expected output:
+
+```
+ WriteResult({
+ "nInserted": 1
 })
 ```
 
 - Let's query for all the burgers, since we just made one burger, it should just show one burger
 - `db.burger.find()`
 - Expected output:
+
 ```
 {
   "_id": ObjectId("5a18c6e82737dc8b317a46dc"),
