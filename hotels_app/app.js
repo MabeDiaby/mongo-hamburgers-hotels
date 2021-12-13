@@ -180,7 +180,7 @@ Hotel.count({} , (err , data)=> {
 //         console.log(data)
 // })
 
-Hotel.count({} , (err , data)=> {
-  if ( err ) console.log( err.message );
-  console.log ( `There are ${data} hotels in this database` );
-});
+// Hotel.count({} , (err , data)=> {
+//   if ( err ) console.log( err.message );
+//   console.log ( `There are ${data} hotels in this database` );
+// });
