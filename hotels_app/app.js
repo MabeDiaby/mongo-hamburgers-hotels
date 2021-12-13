@@ -99,3 +99,32 @@ Hotel.count({} , (err , data)=> {
   console.log ( `There are ${data} hotels in this database` );
 });
 
+// Read
+
+Hotel.find({},(err, data) => {
+    if(err) {
+      console.log(err.message);
+    }
+    console.log(data)
+})
+
+Hotel.find({},{name: 1},(err, data) => {
+    if(err) {
+      console.log(err.message);
+    }
+    console.log(data)
+})
+
+Hotel.find({name: 'Hiltons'},(err, data) => {
+    if(err) {
+      console.log(err.message);
+    }
+    console.log(data)
+})
+
+Hotel.find({vacancies: true}, {ratings: 0}, (err, data) => {
+    if(err) {
+      console.log(err.message);
+    }
+    console.log(data)
+})
