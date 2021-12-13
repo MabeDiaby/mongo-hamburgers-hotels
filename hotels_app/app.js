@@ -101,30 +101,58 @@ Hotel.count({} , (err , data)=> {
 
 // Read
 
-Hotel.find({},(err, data) => {
+// Hotel.find({},(err, data) => {
+//    if(err) {
+//       console.log(err.message);
+//     }
+//     console.log(data)
+// })
+
+// Hotel.find({},{name: 1},(err, data) => {
+//    if(err) {
+//       console.log(err.message);
+//     }
+//     console.log(data)
+// })
+
+// Hotel.find({name: 'Hiltons'},(err, data) => {
+//    if(err) {
+//       console.log(err.message);
+//     }
+//     console.log(data)
+// })
+
+// Hotel.find({vacancies: true}, {ratings: 0}, (err, data) => {
+//    if(err) {
+//       console.log(err.message);
+//     }
+//     console.log(data)
+// })
+
+// Delete
+
+Hotel.deleteOne({name: 'Hotelicopter'}, (err , data) => {
+  if(err) {
+    console.log(err.message);
+  }
+  console.log(data)
+})
+
+Hotel.deleteOne({name: "Hilbert's Hotel"}, (err , data) => {
+  if(err) {
+    console.log(err.message);
+  }
+  console.log(data)
+})
+
+Hotel.findOneAndRemove({location: 'Colorado Rockies'}, (err , data) => {
     if(err) {
       console.log(err.message);
     }
     console.log(data)
 })
 
-Hotel.find({},{name: 1},(err, data) => {
-    if(err) {
-      console.log(err.message);
-    }
-    console.log(data)
-})
-
-Hotel.find({name: 'Hiltons'},(err, data) => {
-    if(err) {
-      console.log(err.message);
-    }
-    console.log(data)
-})
-
-Hotel.find({vacancies: true}, {ratings: 0}, (err, data) => {
-    if(err) {
-      console.log(err.message);
-    }
-    console.log(data)
-})
+Hotel.count({} , (err , data)=> {
+  if ( err ) console.log( err.message );
+  console.log ( `There are ${data} hotels in this database` );
+});
