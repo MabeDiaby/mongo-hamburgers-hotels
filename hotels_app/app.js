@@ -159,23 +159,28 @@ Hotel.count({} , (err , data)=> {
 
 // Update
 
-Hotel.updateOne({name: "The Great Northern"}, {$set:{rating: 5}}, { new: true }, (err , data) => {
-  if(err) {
-          console.log(err.message);
-        }
-        console.log(data)
-})
+// Hotel.updateOne({name: "The Great Northern"}, {$set:{rating: 5}}, { new: true }, (err , data) => {
+//   if(err) {
+//           console.log(err.message);
+//         }
+//         console.log(data)
+// })
 
-Hotel.updateOne({name: "Motel Bambi"}, {$set: {vacancies: false}}, { new: true }, (err , data) => {
-  if(err) {
-          console.log(err.message);
-        }
-        console.log(data)
-})
+// Hotel.updateOne({name: "Motel Bambi"}, {$set: {vacancies: false}}, { new: true }, (err , data) => {
+//   if(err) {
+//           console.log(err.message);
+//         }
+//         console.log(data)
+// })
 
-Hotel.updateOne({location: "White Bay, Oregon"}, {$set: {rating: 2}}, { new: true }, (err , data) => {
-  if(err) {
-          console.log(err.message);
-        }
-        console.log(data)
-})
+// Hotel.updateOne({location: "White Bay, Oregon"}, {$set: {rating: 2}}, { new: true }, (err , data) => {
+//   if(err) {
+//           console.log(err.message);
+//         }
+//         console.log(data)
+// })
+
+Hotel.count({} , (err , data)=> {
+  if ( err ) console.log( err.message );
+  console.log ( `There are ${data} hotels in this database` );
+});
